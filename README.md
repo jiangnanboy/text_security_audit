@@ -19,15 +19,16 @@ The roberta model is converted to onnx format, and java is used for inference.
 
 链接: https://pan.baidu.com/s/1bksb12LOUV3dhJd0Wk4ZAw 提取码: 2dkf
 
+将下载后的model放在resources下。Place the downloaded model under resources.
 ### usage
 【text_classification/TextClassify】
 
 ``` java
-        var textTokenizer = new TextTokenizer("E:\\idea_project\\text_security_audit\\src\\main\\resources\\vocab.txt");
-        var politicModel = new PoliticModel("Z:\\project\\内容检测\\roberta_politic_onnx\\roberta_wwm_politic_model.onnx");
-        var violenceModel = new ViolenceModel("Z:\\project\\内容检测\\roberta_violence_onnx\\roberta_wwm_violence_model.onnx");
-        var pornModel = new PornModel("Z:\\project\\内容检测\\roberta_porn_onnx\\roberta_wwm_porn_model.onnx");
-        var insultModel = new InsultModel("Z:\\project\\内容检测\\roberta_insult_onnx\\roberta_wwm_insult_model.onnx");
+        var textTokenizer = new TextTokenizer("resources\\vocab.txt");
+        var politicModel = new PoliticModel("resources\\roberta_wwm_politic_model.onnx");
+        var violenceModel = new ViolenceModel("resources\\roberta_wwm_violence_model.onnx");
+        var pornModel = new PornModel("resources\\roberta_wwm_porn_model.onnx");
+        var insultModel = new InsultModel("resources\\roberta_wwm_insult_model.onnx");
 
 
         var text = "黑人很多都好吃懒做，偷奸耍滑！";
