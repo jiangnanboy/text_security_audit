@@ -27,6 +27,9 @@ public class TextTokenizer {
      * @throws Exception
      */
     public Map<String, OnnxTensor> parseInputText(String text, OrtEnvironment env) throws Exception{
+        if(text.length() > 510) {
+            text = text.substring(0, 510);
+        }
         var tokens = tokenizer.tokenize(text);
         var tokenIds = tokenizer.convert_tokens_to_ids(tokens);
         var inputIds = new long[tokenIds.size()];
