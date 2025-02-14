@@ -17,7 +17,7 @@ The roberta model is converted to onnx format, and java is used for inference.
 
 模型下载：
 
-链接: https://pan.baidu.com/s/1bksb12LOUV3dhJd0Wk4ZAw 提取码: 2dkf
+https://huggingface.co/jiangnanboy/content_audit
 
 将下载后的model放在resources下。Place the downloaded model under resources.
 ### usage
